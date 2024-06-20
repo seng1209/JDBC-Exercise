@@ -46,8 +46,9 @@ public class Main {
 
             System.out.println(String.format("%-5s %-10s %-10s %-10s", "Id", "Name", "price_per_unit", "active_for_sell"));
             while (rs.next()){
-                System.out.println(String.format("%-5s %-10s %-14s %-10s", rs.getInt(1),
-                        rs.getString(2), rs.getDouble(3), rs.getBoolean(4)));
+                System.out.println(String.format("%-5s %-10s %-14s %-10s", rs.getInt("id"),
+                        rs.getString("name"), rs.getDouble("price_per_unit"),
+                        rs.getBoolean("active_for_sell")));
             }
 
             con.close();
